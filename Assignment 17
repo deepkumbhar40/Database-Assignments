@@ -1,0 +1,22 @@
+
+1.....
+create table orders_table(Onum int(4),Cnum int(4),Snum int(4),Odate date not null,
+primary key(Onum,Cnum,Snum));
+  
+  desc orders_table;
+  
+  2.....
+create table salespeople_table(comm int(3) default 10,
+Snum int(4) primary key, 
+Sname varchar(10) check(substr(upper(Sname),1,1) between 'A' and 'M') );
+  
+  desc salespeople_table;
+  
+  
+  3....
+  create table orders_table1 (onum int(4) NOT NULL,
+  cnum int(4) NOT NULL, snum int(4) NOT NULL,
+  check(cnum>cnum and cnum>snum) );
+  
+  desc orders_table1;
+  
