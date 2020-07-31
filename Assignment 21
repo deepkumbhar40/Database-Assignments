@@ -1,0 +1,28 @@
+
+1........
+
+grant update on customers to Ashish ;
+  
+2..............
+grant select on orders to Ishaan with grant option;
+
+select on ishaan.orders to ashish;
+     
+grant update on ishaan.orders to ashish;
+
+3......
+insert on salespeople from Ajita;
+  
+4.......
+
+create or replace view range100 as select * from customers
+where rating between 100 and 500 with check option;
+
+GRANT update on range100 to Abhijeet;
+
+5.......
+
+create OR replace view v_restrict AS select * from customers
+where rating NOT in (select min(rating) from customers);
+
+select  on v_restrict to Vikram;
