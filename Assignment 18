@@ -1,0 +1,10 @@
+
+1.....
+create table cityorder select onum,amt,snum,cnum,city
+from orders inner join customers;
+ 
+ 
+2......
+alter table cityorder add column prev int;
+alter table cityorder add foreign key(prev) REFERENCES cityorders(onum); 
+alter table cityorders add foreign key(Cnum) REFERENCES customers(Cnum); 
